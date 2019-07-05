@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+*{margin:0; padding:0; border:none; box-sizing:border-box; font-family: 'Nanum Gothic', sans-serif;}
+li{list-style:none;}
+a,select{text-decoration:none; color:#666;}
+h1,h2,h3,h4,h5,h6,p,i,strong,em,u,ul,li,div,span,table,tr,td,ol,form{font-size:16px; font-weight:300;}
+img{vertical-align:bottom;}

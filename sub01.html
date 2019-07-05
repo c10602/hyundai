@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+         <!-- 슬라이더 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script>
+            $(function(){
+                $('.slider').bxSlider({
+                    auto: true,
+                    pager: true,
+                    
+                });
+                $('.slider1').bxSlider({
+                    auto: true,
+                    pager: false,
+                    
+                });
+
+                var rsecHeight=$('.r_sec').innerHeight();
+                $('.l_sec').innerHeight(rsecHeight);
+                console.log(rsecHeight);
+                // $(window).on('resize',function(){
+                //     var rsecHeight1=$('.r_sec').innerHeight();
+                //     console.log(rsecHeight1);
+                //     ('.l_sec').innerHeight(rsecHeight1);
+                // });
+                
+
+                // 로그인 창 숨김/토글
+                
+                $(".login_form").hide();
+
+                $(".login").on("click",function(){
+                     $(".login_form").toggle();
+                });
+
+                // 회원가입 창 숨김/토글
+                $(".join_form").hide();
+
+                $(".join").on("click",function(){
+                     $(".join_form").toggle();
+                });    
+
+            });
+
+
+
+        </script>
+   
+        
+        <!-- 사용자 css -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/common01.css">
+        <!-- 제이쿼리 스크립트  -->
+        <link rel="stylesheet" href="js/jquery-3.4.1.js">
+
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" href="images/logo.png">
+        <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
+
+        <!-- 구글 폰트 -->
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+       
+    </head>
+
+    <body>
+        <div class="wrap">
+
+            <!-- 헤더 -->
+            <header>
+
+                <!-- 윗쪽 네비게이션 -->
+                <div class="nav_top">
+                    <ul>
+                        <li class="login"><a href="#">개인 로그인</a></li>
+                        <li><a href="#">법인 로그인</a></li>
+                        <li class="join"><a href="#">회원가입</a></li>
+                        <li><a href="#">WORLDWIDE</a></li>
+                        <li><a href="#">채용</a></li>
+                        <li><form>
+                            <select name="lang">
+                                <option value="">LANGUAGE</option>
+                                <option value="">한국어</option>
+                                <option value="">ENGLISH</option>
+                                <option value="">中文</option>
+                            </select></form>
+                        </li>
+                        <li><a href="#">검색</a></li>
+                    </ul>
+                </div>
+
+                <!-- 로그인 폼 -->
+                <div class="login_form">
+                    <form action="#" name="로그인">
+                        <div class="logo"><img src="images/logo_text.png" alt="로고"></div>
+                        <div>
+                            <ul>
+                                <li>이메일로그인<br><input type="email" placeholder="이메일 주소"></li>
+                                <li>비밀번호<br><input type="password" placeholder="비밀번호"></li>
+                            </ul>
+                        </div>
+                        <div>로그인</div>
+                        <div>
+                            <ul>
+                                <li><a href="#"><h2>아이디 찾기 | 비밀번호 초기화</h2></a></li>
+                                <li><h3>현대자동차 통합계정에 가입하지 않으셨나요? <h7><a href="#">회원가입▶</a></h7></h3></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 회원가입 폼 -->
+                <div class="join_form">
+                    <form action="#" name="회원가입">
+                        <div class="logo"><img src="images/logo_text.png" alt="로고"></div>
+                        <div>
+                            <ul>
+                                <li><h1>가입 정보 입력</h1></li>
+                                <li><h6>로그인 정보 및 가입 정보를 입력하세요.</h6></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>이메일주소<br><input type="email" placeholder="이메일 주소"></li>
+                                <li>비밀번호<br><input type="password" placeholder="8~15자리의 영문 대/소문자 및 숫자를 입력해 주세요."></li>
+                                <li><input type="password" placeholder="비밀번호 확인"></li>
+                                <li>이름<br><input type="text" value="이름"></li>
+                                <li>생년월일<br><input type="date"></li>
+                            </ul>
+                        </div>
+                        <div>회원가입</div>
+                        <div>
+                            <ul>
+                                <li><a href="#"><h2>로그인 페이지로 이동</h2></a></li>
+                                <li><h3>COPYRIGHT © HYUNDAI MOTOR COMPANY. ALL RIGHTS RESERVED.</h3></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 아래 네비게이션 -->
+                <div class="nav_bot">
+                    <ul>
+                        <li><a href="index.html"><img src="images/logo_text.png" alt="로고"></a></li>
+                        <li><a href="#">전체모델</a></li>
+                        <li><a href="#">구매가이드</a></li>
+                        <li><a href="#">브랜드</a></li>
+                        <li><a href="#">고객서비스</a></li>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <!-- 섹션 -->
+            <div class="section">
+
+                <!-- 왼쪽 섹션 -->
+                <div class="l_sec">
+                    <div>
+                        <a href="sub01.html"><div>
+                            <div><img src="images/smlogo01.svg" alt="달력로고"></div>
+                            <div>이달의<br>구매혜택</div>
+                        </div></a>
+                        <a href="sub02.html"><div>
+                            <div><img src="images/smlogo02.svg" alt="자동차로고"></div>
+                            <div>내차 만들기<br>(견적)</div></div></a>
+                        <a href="sub03.html"><div>
+                            <div><img src="images/smlogo03.svg" alt="자동차로고"></div>
+                            <div>전시차<br>조회</div></div></a>    
+                        <a href="sub04.html"><div>
+                            <div><img src="images/smlogo04.svg" alt="자동차로고"></div>
+                            <div>시승신청</div></div></a>
+                        <a href="sub05.html"><div>
+                            <div><img src="images/smlogo05.svg" alt="자동차로고"></div>
+                            <div>카탈로그<br>다운로드</div></div></a>
+                        <a href="sub06.html"><div>
+                            <div><img src="images/smlogo06.svg" alt="자동차로고"></div>
+                            <div>구매상담<br>신청</div></div></a>
+                        <a href="sub07.html"><div>
+                            <div><img src="images/smlogo07.svg" alt="자동차로고"></div>
+                            <div>블루멤버스<br>포인트몰</div></div></a>
+                    </div>       
+                </div><div class="r_sec">
+
+                    <!-- 아티클 -->
+                    <article>
+                        <div class="sub01_art01">
+                            <div>
+                                <ul>
+                                    <li><a href="#">홈</a> ></li>
+                                    <li><a href="#">구매가이드 ></a></li>
+                                    <li>이달의 구매혜택</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>이달의 구매혜택</li>
+                                    <li>현대자동차의 특별하고 스마트한 월별 구매혜택 및 차종별 구매혜택에 대해 알려드립니다</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub01_art02">
+                            <div>
+                                <ul>
+                                    <li>특별한 구매혜택 안내</li>
+                                    <li><span>6월</span> 현대자동차의 <span>특별한 구매혜택</span>을 알려드립니다.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="#"><img src="images/event01.jpg" alt="이벤트01"></a></li>
+                                    <li><a href="#"><img src="images/event02.jpg" alt="이벤트02"></a></li>
+                                    <li><a href="#"><img src="images/event03.jpg" alt="이벤트03"></a></li>
+                                    <li><a href="#"><img src="images/event04.jpg" alt="이벤트04"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub01_art03">
+                            <div>
+                                <ul>
+                                    <li>기본 구매혜택</li>
+                                    <li><span>6월</span> 현대자동차의 <span>기본 구매혜택</span>을 알려드립니다.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>차종</td>
+                                        <td>구입혜택</td>
+                                        <td colspan="2">Save Auto</td>
+                                    </tr>
+                                    <tr>
+                                        <td>액센트<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>*개소세 인하기념 추가할인:20만<br><br>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>20만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>더 뉴 아반떼<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>*타겟 조건:고객별 추가 혜택<br><br>
+                                            *생산월 조건(소진 시 혜택 없음)<br><br>
+                                            -19.4월 이전 생산분:3% 할인+1.25% 저금리
+                                        </td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>i30<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>*개소세 인하기념 추가할인:50만<br><br>
+                                            *타겟 조건:고객별 추가 혜택<br><br>
+                                            *생산월 조건(소진 시 혜택 없음)<br><br>
+                                            -19.4월 이전 생산분:30만
+                                        </td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>벨로스터<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>*개소세 인하기념 추가할인<br><br>
+                                            *타겟 조건:고객별 추가 혜택<br><br>
+                                            *생산월 조건(소진 시 혜택 없음)<br><br>
+                                            -18.12월 이전 생산분:70만<br>
+                                            -19.1월~2월 생산분:50만<br>
+                                            -19.3월~4월 생산분:30만
+                                        </td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>벨로스터N<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>i40                                            
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>신형 쏘나타<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>그랜저<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택<br><br>
+                                            *생산월 조건(소진 시 혜택 없음)<br><br>
+                                            -19.3월이전 생산분:3%
+                                        </td>
+                                        <td>30만/50만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>코나<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>*개소세 인하기념 추가할인<br><br>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>20만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>투싼<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>싼타페<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택<br><br>
+                                            *생산월 조건(소진 시 혜택 없음)<br><br>
+                                            -19.3월 이전 생산분:3%<br>
+                                            -19.4월 생산분:50만
+                                        </td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>팰리세이드<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만/50만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>더 뉴 그랜드 스타렉스<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>아이오닉 Hybrid<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>아이오닉 Electric<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택<br><br>
+                                            *생산월 조건(소진 시 혜택 없음)<br><br>
+                                            -18.12월 이전 생산분:200만<br>
+                                            -19.1-2월 생산분:150만<br>
+                                            -19.3-4월 생산분:100만
+                                        </td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>아이오닉 Plug-in<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>그랜저 Hybrid<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td>
+                                            *타겟 조건:고객별 추가 혜택</td>
+                                        <td>30만/50만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>코나 Electric<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td></td>
+                                        <td>30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>넥쏘<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>포터 Ⅱ<br>
+                                            <a href><h1>견적내기</h1></a>
+                                        </td>
+                                        <td></td>
+                                        <td>20만/30만</td>
+                                        <td><a href="#">▼</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>· 할부/금융 관련 자세한 사항은 현대자동차 지점/대리점 문의 바랍니다.</li>
+                                    <li>· Save Auto란? 현대자동차 신차 구입시 현대카드M을 이용하여 선수금을 10만원 이상 결제하시는 경우 차량구매 대금중 일부를 해당포인트(20만/30만/50만)만큼 先할인해 드립니다.<a href="#"><h2>자세히보기></h2></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub01_art04">
+                            <div>
+                                <ul>
+                                    <li>블루멤버스 포인트 적립</li>
+                                    <li>차종 구매가의 회원유형/구매횟수별 지급기준에 따라 포인트를 적립 해 드립니다.</li>
+                                    <li>(1포인트=1원)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td colspan="2">구분</td>
+                                        <td colspan="6">구매 횟수별 포인트 지급기준(%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4" class="table_back">개인회원</td>
+                                        <td rowspan="2" class="table_back">일반회원<br>(개인/개인사업자)</td>
+                                        <td>1회</td>
+                                        <td>2회</td>
+                                        <td>3회</td>
+                                        <td>4회</td>
+                                        <td>5회</td>
+                                        <td>6회 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0.7</td>
+                                        <td>1.1</td>
+                                        <td>1.5</td>
+                                        <td>2</td>
+                                        <td>2.5</td>
+                                        <td>3.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table_back">개인택시</td>
+                                        <td colspan="6">신규/재구매 0.7% 동일</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table_back">렌트/리스 이용개인</td>
+                                        <td colspan="6">신규/재구매 0.3% 동일</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table_back">법인회원</td>
+                                        <td class="table_back">일반법인<br>렌트/리스사<br>렌트/리스 이용법인</td>
+                                        <td colspan="6">신규/재구매 0.3% 동일</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="sub01_art04_text">
+                                <ul>
+                                    <li>· 대상 : 현대 브랜드 승용, RV, 소형상용(포터, 스타렉스)</li>
+                                    <li>· 상기 적립률은 고객이 차종 구매 시 지급한 최종 가격 기준이며, 대당 최대 적립액은 최대 200만 포인트 입니다. (원단위 소수점 절사)</li>
+                                    <li>· 패밀리 임직원(당사/계열사/협력사 등) 은 차종구매조건에 따라 포인트 적립률이 달라질 수 있습니다.</li>
+                                    <li>· 포인트는 주계약자의 당사 차종구매 이력 기준으로 적립되며, 보유 이력이 사실과 다른 경우 현대자동차 지점 및 대리점에 자동차 등록 원부를 제출하여 주시기 바랍니다.
+                                        <ul>
+                                            <li>- 장애인 공동명의에 한하여 공동명의자의 과거 구매 이력이 인정됩니다.(단, 면세 건에 한함)</li>
+                                            <li>- 차종 구매 계약 전 관련 서류를 지점/대리점에 제출해 주신 건에 한하여 이력 확인 후 적립이 가능합니다.</li>
+                                            <li>- 렌트/리스로 구매하신 이력은 구매 횟수에 포함되지 않습니다.(개인회원)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sub01_art04_text">
+                                <ul>
+                                    <li>· 지급된 포인트는 5년간 사용할 수 있으며, 5년이 지난 시점에 먼저 지급/적립된 포인트부터 월단위로 자동 소멸됩니다.</li>
+                                    <li>· 본 혜택은 2013년 12월 1일 이후 출고(제작증 발급)된 차종부터 적용됩니다.</li>
+                                    <li>· 단, 차종 출고(제작증 발급) 후 6개월 이내 블루멤버스 가입한 회원에 한해 적립되며, 법인 임직원은 신차 구매 시 포인트 적립 대상에서 제외됩니다.</li>
+                                    <li>· 차종 계약 조건에 따라 적립률이 달라질 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                    <footer>
+                        <div class="foot_top">
+                            <div><img src="images/foot_logo.svg" alt="로고"></div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <ul>
+                                            <li><a href="#">공지사항 |</a></li>
+                                            <li><a href="#">FAQ |</a></li>
+                                            <li><a href="#">자료실 |</a></li>
+                                            <li><a href="#">모바일APP |</a></li>
+                                            <li><a href="#">저작권안내 |</a></li>
+                                            <li><a href="#">개인정보 처리방침 |</a></li>
+                                            <li><a href="#">이용약관</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="#">윤리경영 사이버 감사실 |</a></li>
+                                            <li><a href="#">영상정보처리기기 운영관리방침 |</a></li>
+                                            <li><a href="#">사이트맵</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>고객센터:080-600-6000(승용), 080-200-6000(상용)</li>
+                                    <li>사업자: 현대자동차㈜ | 대표 : 이원희 | 사업자등록번호 : 101-81-09147 | 주소 : 서울특별시 서초구 헌릉로 12, 1층(양재동)</li>
+                                    <li>COPYRIGHT ⓒ HYUNDAI MOTOR COMPANY.ALL RIGHTS RESERVED.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                                    <li><a href="#"><img src="images/youtube.png" alt=""></a></li>
+                                    <li><a href="#"><img src="images/naver.png" alt=""></a></li>
+                                    <li><a href="#"><img src="images/twiter.png" alt=""></a></li>
+                                    <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+                                </ul>    
+                                    <form>
+                                        <select name="sitemap">
+                                            <option value="">Family site</option>
+                                            <option value="">현대자동차 그룹</option>
+                                            <option value="">제네시스 공식 웹사이트</option>
+                                            <option value="">현대 컬렉션 온라인샵</option>
+                                            <option value="">키즈현대</option>
+                                            <option value="">동반성장 사이트</option>
+                                            <option value="">글로벌경영연구소</option>
+                                            <option value="">전북 현대모터스 축구단</option>
+                                        </select>
+                                    </form>
+                                
+                            
+                            </div>
+                        </div>
+                        <div class="foot_bot">
+                            <ul>
+                                <li>
+                                    <div><img src="images/footer_logo01.png" alt="푸터로고1"></div>
+                                    <div>웹 접근성 품질인증</div></li>
+                                <li>
+                                    <div><img src="images/footer_logo02.png" alt="푸터로고2"></div>
+                                    <div>우수디자인 지식경제부선정</div></li>
+                                <li>
+                                    <div><img src="images/footer_logo03.png" alt="푸터로고3"></div>
+                                    <div>가족친화 우수기관</div></li>
+                                <li>
+                                    <div><img src="images/footer_logo04.png" alt="푸터로고4"></div>
+                                    <div>2018 K5-SQ!<br>(한국서비스품질지수) 자동차A/S 부문 4년 연속 1위</div></li>
+                                <li>
+                                    <div><img src="images/footer_logo05.png" alt="푸터로고5"></div>
+                                    <div>2018년 한국품질만족지수 (K5-QEI)조사 전 부문 8년 연속 1위(준중형,중형,RV,자동차AS)</div></li>
+                                <li>
+                                    <div><img src="images/footer_logo06.png" alt="푸터로고6"></div>
+                                    <div>2018년 국가고객만족도 (NCSI) 자동차기업 최초 조사대상 전부문 4년 연속 1위 수상(소형,준중형,중형,준대형,대형,RV)</div></li>
+                                <li>
+                                    <div><img src="images/footer_logo07.png" alt="푸터로고7"></div>
+                                    <div>2018년 한국산업의 고객만족도 (KCSI) 일반승용차 부문 25년 연속 1위 RV승용차 부문 15년 연속 1위</div></li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
